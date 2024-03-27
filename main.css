@@ -50,6 +50,7 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: auto;
     z-index: 1;
+    margin: 50px; /* Réduire la marge */
 }
 
 
@@ -65,19 +66,24 @@ body {
   }
 
   .profile-info {
-    float: right;
+    float: left;
     width: 60%;
-    padding: 15px;
+    padding: 1px; /* Réduire le rembourrage */
+    margin: 5px; /* Réduire la marge */
+    font-size: 20px; /* Réduire la taille de la police */
   }
-
+  
   .profile-info h1 {
-    font-size: 35px;
-    margin-top: 0;
+    font-size: 30px; /* Réduire la taille du titre */
+    padding: 1px; /* Réduire le rembourrage */
+    margin: 5px; /* Réduire la marge */
   }
-
+  
   .profile-info p {
     margin: 0 0 5px;
-    font-size: 20px;
+    font-size: 20px; /* Réduire la taille du texte normal */
+    padding: 1px; /* Réduire le rembourrage */
+    margin: 5px; /* Réduire la marge */
   }
 
   .profile-info p strong {
@@ -89,17 +95,15 @@ body {
     margin-left:25px;
     margin-right: 25px;
     text-align: justify;
+    padding: 1px; /* Réduire le rembourrage */
+    margin: 5px; /* Réduire la marge */
+    font-size: 20px; /* Réduire la taille de la police */
   }
 
   .bg {
     background-image: radial-gradient(circle, rgba(255,255,255,0), rgba(0,0,0,1)), url('https://wallpapercave.com/wp/wp4806789.jpg');
     background-position: cover;
     overflow-y: hidden;
-  }
-
-  p.s{
-    margin-left: 40px;
-    color: #ffffff1c;
   }
 
   .fleche{
@@ -140,5 +144,7 @@ body {
   }
 
   .s{
-    position:fixed;
+    position:left;
+    margin-top: -150px;
+    color: #ffffff1c;
   }
