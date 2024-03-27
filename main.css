@@ -110,11 +110,15 @@ body {
   .sidebar {
     height: 100%;
     width: 200px;
-    position: fixed;
+    position: left;
     top: 0;
     left: 0;
     background-color: #111;
     padding-top: 20px;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    max-height: 400px;
   }
 
   .sidebar a {
