@@ -6,6 +6,8 @@ body {
   }
 
   .container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement le contenu */
     max-width: 800px;
     margin: 40px auto;
     background-image: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
@@ -51,8 +53,14 @@ body {
     overflow: auto;
     z-index: 1;
     margin: 50px; /* Réduire la marge */
-}
+    display: block; /* Assurez-vous que l'élément est affiché normalement sur les appareils de taille normale */
+  }
 
+  @media only screen and (max-width: 600px) {
+    .containerx {
+      display: none; /* Masquer l'élément sur les appareils avec une largeur d'écran maximale de 600 pixels */
+    }
+  }
 
 
   .profile-picture {
@@ -109,7 +117,6 @@ body {
   .fleche{
     margin-top: 40px;
     margin-left: 1000px;
-
   }
 
   .sidebar {
@@ -147,4 +154,21 @@ body {
     position:left;
     margin-top: -150px;
     color: #ffffff1c;
+  }
+
+
+  .show-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  .show-button:hover {
+    background-color: #0056b3;
   }

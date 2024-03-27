@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Discord</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #chat-container {
+            width: 400px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-y: scroll;
+            height: 300px;
+        }
+        #chat-messages {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        #chat-messages li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <ul id="chat-messages"></ul>
+    </div>
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+
+        const addMessageToChat = (username, content) => {
+            const messageElement = document.createElement('li');
+            messageElement.textContent = `${username}: ${content}`;
+            chatMessages.appendChild(messageElement);
+        };
+
+        const socket = new WebSocket('ws://localhost:3000');
+
+        socket.addEventListener('message', event => {
+            const message = JSON.parse(event.data);
+            addMessageToChat(message.username, message.content);
+        });
+    </script>
+</body>
+</html>

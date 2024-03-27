@@ -14,6 +14,7 @@
   <div class="sidebar">
     <a href="consignes.html">Consignes</a>
     <a href="createur1.html">Page créateurs</a>
+    <a href="test.html">Test</a>
   </div>
 
   <div class="content">
@@ -22,12 +23,11 @@
         <a href="https://store.epicgames.com/fr/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/Tim_Sweeney%2C_GDCA_2017_%28portrait_crop%29.jpg" alt="Photo de Gabe Newell"></a>
       </div>
       <div class="profile-info">
-        <h1>G̶a̶b̶e̶ ̶N̶e̶w̶e̶l̶l̶</h1>
-        <p><strong>Date de naissance :</strong> 3 novembre 1962 (61 ans)</p>
-        <p><strong>Lieu de naissance :</strong> Seattle, Washington</p>
-        <p><strong>Formation :</strong> Université Harvard</p>
-        <p><strong>Profession :</strong> Président de Valve Corporation</p>
-        <p><strong>Surnom :</strong> GabeN</p>
+        <h1> ̶G̶a̶b̶e̶ ̶N̶e̶w̶e̶l̶l̶ Tim Sweeney</h1>
+        <p><strong>Date de naissance :</strong> Decembre 1970</p>
+        <p><strong>Lieu de naissance :</strong> Potomac, Maryland</p>
+        <p><strong>Formation :</strong> génie mécanique </p>
+        <p><strong>Profession :</strong> Programmeur et développeur de jeux vidéo , homme d'affaires </p>
       </div>
     </div>
     <div class="container">
@@ -40,16 +40,55 @@
       </div> 
     </div>
   </div>
-
+  <div class="containerf"><a href="page2.html" target="_self"><img src="flech.png" alt="flèche" width="100%"></a></div>
   <p class="s">Source :<a href="https://fr.wikipedia.org/wiki/Gabe_Newell" target="_blank"> wikipedia</a></p>
   
-  <div class="containerx">
+  <div class="containerx" style="display: none;">
     <div class="twitter-container">
       <a class="twitter-timeline" href="https://twitter.com/EpicGames">Tweets by Epic games</a>
     </div>
   </div>
+
+  <button id="showTwitterButton" class="show-button">Afficher Twitter</button>
+
+  <script>
+    let twitterVisible = false; // Variable pour suivre l'état de l'affichage de Twitter
+
+    document.getElementById('showTwitterButton').addEventListener('click', function() {
+      const containerx = document.querySelector('.containerx');
+      
+      if (!twitterVisible) {
+        containerx.style.display = 'block';
+        document.getElementById('showTwitterButton').textContent = 'Cacher Twitter';
+        twttr.widgets.load(); // Recharge les widgets Twitter
+      } else {
+        containerx.style.display = 'none';
+        document.getElementById('showTwitterButton').textContent = 'Afficher Twitter';
+      }
+
+      twitterVisible = !twitterVisible; // Inverse l'état de l'affichage de Twitter
+    });
+  </script>
+
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-  <body background class="bg">
+  <style>
+    @media only screen and (max-width: 600px) {
+      .containerx {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 350px;
+        max-height: 700px;
+        background-image: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+        border-radius: 16px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        z-index: 1;
+      }
+    }
+  </style>
 </body>
 </html>
