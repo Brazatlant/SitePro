@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
     padding: 0;
     background-color: #f0f0f0;
     background-image: url('https://wallpapercave.com/wp/wp4806789.jpg');
@@ -40,18 +39,19 @@ body {
 
   .containerx {
     position: fixed;
-    bottom: 0;
+    top: 50%;
     right: 0;
+    transform: translate(0, -50%);
     width: 100%;
-    max-width: 400px;
-    max-height: 800px;
+    max-width: 350px;
+    max-height: 700px;
     background-image: radial-gradient(circle, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
     border-radius: 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: auto;
     z-index: 1;
-    padding: 20px;
-  }
+}
+
 
 
   .profile-picture {
@@ -92,8 +92,9 @@ body {
   }
 
   .bg {
-    background-image: radial-gradient(circle, rgba(255,255,255,0), rgba(0,0,0,1)), url(https://wallpapercave.com/wp/wp4806789.jpg);
+    background-image: radial-gradient(circle, rgba(255,255,255,0), rgba(0,0,0,1)), url('https://wallpapercave.com/wp/wp4806789.jpg');
     background-position: cover;
+    overflow-y: hidden;
   }
 
   p.s{
@@ -136,4 +137,8 @@ body {
   .content {
     margin-left: 220px;
     padding: 20px;
+  }
+
+  .s{
+    position:fixed;
   }
